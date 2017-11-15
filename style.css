@@ -1,0 +1,84 @@
+body {
+    background-image: url("images/fondue-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body:after {
+    display: none;
+    content: url("images/facebook-logo-white.png") url("images/facebook-logo-yellow.png");
+}
+
+.center {
+    margin: auto;
+    position: fixed;
+    display: flex;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 60%;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    position: relative;
+    max-width: 100%;
+}
+
+.facebook div {
+    -moz-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+    background: url("images/facebook-logo-yellow.png") ;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 113px;
+    height: 113px;
+}
+
+.facebook div:hover {
+    background: url("images/facebook-logo-white.png");
+}
+
+.facebook {
+    display: block;
+    margin: auto;
+    width: 113px;
+    height: 113px;
+}
+
+p {
+    font-family: Roboto Light;
+    font-size: 1.6em;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    /*background: rgba(36, 19, 0, .75);*/
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 10px;
+}
+
+.bold {
+    font-family: Roboto Medium;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
+}
+
