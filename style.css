@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=latin-ext');
+
 body {
-    background-image: url("images/fondue-bg.jpg");
+    background-image: url("images/fondue-bg-big.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
+
+#bg {
+    display: none;
+}
+
+#bg img {
+    display: none;
+}
+
 
 body:after {
     display: none;
@@ -57,7 +68,8 @@ body:after {
 }
 
 p {
-    font-family: Roboto Light;
+    font-family: Roboto, sans-serif ;
+    font-weight: 400;
     font-size: 1.6em;
     color: #ffffff;
     text-align: center;
@@ -68,7 +80,8 @@ p {
 }
 
 .bold {
-    font-family: Roboto Medium;
+    font-family: Roboto Medium, sans-serif;
+    font-weight: 500;
 }
 
 
@@ -79,6 +92,63 @@ p {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 0;
+    z-index: -1;
 }
 
+@media only screen and (max-width: 768px) {
+    p {
+        font-size: 1em;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+    .facebook div {
+        background-size: 80px 80px;
+        margin: auto;
+        width: 80px;
+        height: 80px;
+    }
+
+    .facebook div:hover {
+        background: url("images/facebook-logo-white.png");
+        background-size: 80px 80px;
+    }
+
+    .facebook {
+        display: block;
+        margin: auto;
+        width: 80px;
+        height: 80px;
+    }
+
+    #bg {
+        display: block;
+        position: fixed;
+        top: -50%;
+        left: -60%;
+        width: 200%;
+        height: 200%;
+        z-index: -2;
+    }
+
+    #bg img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        min-width: 10%;
+        min-height: 10%;
+        max-width: 150%;
+        max-height: 150%;
+        z-index: -2;
+    }
+
+    body {
+        background: none;
+    }
+}
